@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Favorites Organizer powered by Cloudant</title>
+	<title>CSC FirstDoc Store</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="stylesheet" href="/style/style.css" />
 </head>
 <body>
-	<div class="leftHalf">
-<img class="newappIcon" src="images/newapp-icon.png">
-				<h1>
-					Welcome to the <span class="blue">Favorites Organizer powered by Cloudant</span>
-				</h1>
-	</div>
-	<div class = "rightHalf">
-	<header>
-		<div class='title'>Favorites Organizer
-		<button class='' onclick="toggleAppInfo()" title='Application Information'>
-				<img height="15px" width="15px" src='images/info.png' alt='detail'/>		
-		</button>
-		</div>
-	</header>	
-	<section id='appinfo' style='display: none;'>
-		<table>
-			<tbody>
-				<tr><td>This application helps you organize your favorite files.</td></tr>
-				<tr><td>Supports all file types, like Audio, Video, Photos, Text etc.</td></tr>
-				<tr><td>Click on <img src='images/add.png' alt='add'/> icon to create a new category for your files. Provide a title and description for the category in the text fields.</td></tr>
-				<tr><td>To add a file to a given category, Click on 'Browse' button to select a file, and 'Upload' button to upload the file.</td></tr>
-				<tr><td>To modify a title or description, Edit the text and press Enter.</td></tr>
-				<tr><td>You can add multiple files (of any type) to a category.</td></tr>
-				<tr><td>Click on <span class = 'deleteBtn' alt='delete'></span> icon to delete the category.</td></tr>
-				
-				
-			</tbody>
-		</table>
-	</section>
-	<section>
-		<table id='notes' class='records' border='0' cellspacing='0' cellpadding='0'><tbody></tbody></table>
-	</section>
-	<footer>
-		<div class='tips'>Click the Add button to add a new category.
-			<!-- <button class='detailBtn' onclick="toggleServiceInfo()" title='Service information'>
-				<img src='images/detail.png' alt='detail'/>
-			-->
-			<button class="addBtn" onclick="addItem()" title="add record">
-							<img src="images/add.png" alt="add">
-						</button>
-		</div>
-		<div id="loadingImage"></div>	
-		<br><br><br><br><br>	
-		<div id="errorDiv" class='errorMsg'></div>	
-	</footer>
-	<script type="text/javascript" src="/scripts/util.js"></script>
-	<script type="text/javascript" src="/scripts/index.js"></script>
-	<div id="myImage"><div id="innerImg"></div></div>
-	<br><br><br>	
-	</div>
+    <img class="newappIcon" src="images/csc_logo.png">
+    <div>
+        <h3>
+            <span class="big darkBrown">W</span>elcome to <span class="big darkBrown">CSC Application</span>
+        </h3>
+
+        <h4>Please click the link below to download the app from csc</h4>
+        <a href="#" id="firstDocDownload">FirstDoc Mobile 0.9 Application released by 31-Aug</a>
+    </div>    
+    
+    <div>
+       <br> <br>
+        Installation Instructions: <br>
+        <b><u>iPhone</u></b>
+        <ol>
+            <li>After clicking the install button the app will install in the background. Go to home screen to launch the app.</li>
+            <li>
+            If you get the error that app is from untrusted developer then: <br>
+            In iOS 9.1 and lower, go to Settings &#8594; General &#8594; Profiles &#8594; tap on Profile ìComputer Science Corporationî &#8594; tap on Trust button.<br>
+            In iOS 9.2+, go to Settings &#8594; General &#8594; Device Management &#8594; tap on Profile ìComputer Science Corporationî &#8594; tap on Trust button.
+           </li>
+        </ol>
+        
+        <br>
+        <b><u>Android</u></b>
+        <ol>
+            <li>
+                After clicking the install button the app installation file will download in the background. Go to notifications and tap the downloaded installation file to begin installation.
+            </li>
+            <li>
+                If you get the error that the install is blocked then go to Settings &#8594; Security &#8594; Unknown sources &#8594; Check Unknown Sources and tap on the installation again to install the app.
+            </li>
+        </ol>
+    </div>
+    <a href="itms-services://?action=download-manifest&url=https://cscfirstdoc.mybluemix.net/build/FirstDocMobileTesting.plist">FirstDoc Mobile 0.9 Application for internal testing only</a>
+	</br>
+    <a href="itms-services://?action=download-manifest&url=https://cscfirstdoc.mybluemix.net/build/FirstDocMobileSprint1.plist">FirstDoc Mobile 1.0 Application for Sprint1 by 4 Nov 2016</a>
+	</br>
+   <a href="itms-services://?action=download-manifest&url=https://cscfirstdoc.mybluemix.net/build/FirstDocMobileSprint2Branch.plist">FirstDoc Mobile 1.0 RC1 (Sprint2) by 25 Nov 2016</a>
+    <script type="text/javascript" src="scripts/detect.js"></script>
 </body>
 </html>
