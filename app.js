@@ -415,8 +415,20 @@ app.get('/api/favorites', function(request, response) {
 	});
 
 });
-
-
+app.get('/api/files', function(request, response) {
+	const testFolder = '.';
+	var docList = [];
+	fs.readdir(testFolder, (err, files) => {
+	  files.forEach(file => {
+	    console.log(file);
+		docList.push(file);
+	  });
+	})
+	response.write(JSON.stringify(docList));
+	console.log(JSON.stringify(docList));
+	console.log('ending response...');
+	response.end();
+});
 http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
 	console.log('Express server listening on port ' + app.get('port'));
 });
