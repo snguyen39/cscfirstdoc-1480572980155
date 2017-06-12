@@ -415,11 +415,11 @@ app.get('/api/favorites', function(request, response) {
 	});
 
 });
-app.get('/api/files', function(request, response) {
+app.get('/api/files1', function(request, response) {
 	var testFolder = './public';
 	var docList = [];
 	docList.push("start");
-	fs.readdir(testFolder, function (err, files) {
+	/*fs.readdir(testFolder, function (err, files) {
 	    if (err) {
 		throw err;
 	    }
@@ -428,7 +428,7 @@ app.get('/api/files', function(request, response) {
 		console.log(file);
 		docList.push(file);
 	    });
-	});
+	});*/
 	response.write(JSON.stringify(docList));
 	console.log(JSON.stringify(docList));
 	console.log('ending response...');
