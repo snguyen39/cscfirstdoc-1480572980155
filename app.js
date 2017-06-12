@@ -418,7 +418,7 @@ app.get('/api/favorites', function(request, response) {
 app.get('/api/files', function(request, response) {
 	var testFolder = './public';
 	var docList = [];
-	
+	docList.push("start");
 	fs.readdir(testFolder, function (err, files) {
 	    if (err) {
 		throw err;
