@@ -416,10 +416,10 @@ app.get('/api/favorites', function(request, response) {
 
 });
 app.get('/api/files', function(request, response) {
-	var testFolder = __dirname + '/public/build';
+	var testFolder = __dirname;
 	var docList = [];
 	docList.push(testFolder);
-	docList.push("start4");
+	docList.push("start5");
 	fs.readdir(testFolder, function (err, files) {
 	    files.forEach(function (file) {
 		console.log(file);
