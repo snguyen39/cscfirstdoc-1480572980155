@@ -416,14 +416,19 @@ app.get('/api/favorites', function(request, response) {
 
 });
 app.get('/api/files', function(request, response) {
-	const testFolder = '.';
+	var testFolder = './public';
 	var docList = [];
-	fs.readdir(testFolder, (err, files) => {
-	  files.forEach(file => {
-	    console.log(file);
+	
+	fs.readdir(testFolder, function (err, files) {
+	    if (err) {
+		throw err;
+	    }
+
+	    files.forEach(function (file) {
+		console.log(file);
 		docList.push(file);
-	  });
-	})
+	    });
+	});
 	response.write(JSON.stringify(docList));
 	console.log(JSON.stringify(docList));
 	console.log('ending response...');
