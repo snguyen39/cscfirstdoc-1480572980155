@@ -415,20 +415,16 @@ app.get('/api/favorites', function(request, response) {
 	});
 
 });
-app.get('/api/files1', function(request, response) {
-	var testFolder = './public';
+app.get('/api/files', function(request, response) {
+	var testFolder = __dirname + '/public';
 	var docList = [];
-	docList.push("start");
-	/*fs.readdir(testFolder, function (err, files) {
-	    if (err) {
-		throw err;
-	    }
-
+	docList.push("start1");
+	fs.readdir(testFolder, function (err, files) {
 	    files.forEach(function (file) {
 		console.log(file);
 		docList.push(file);
 	    });
-	});*/
+	});
 	response.write(JSON.stringify(docList));
 	console.log(JSON.stringify(docList));
 	console.log('ending response...');
