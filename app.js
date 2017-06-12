@@ -419,7 +419,7 @@ app.get('/api/files', function(request, response) {
 	var testFolder = __dirname + '/public';
 	var docList = [];
 	docList.push(testFolder);
-	docList.push("start1");
+	docList.push("start2");
 	fs.readdir(testFolder, function (err, files) {
 	    files.forEach(function (file) {
 		console.log(file);
