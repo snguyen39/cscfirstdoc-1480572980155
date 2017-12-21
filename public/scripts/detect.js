@@ -27,15 +27,19 @@ var isMobile = {
 };
 
 var firstDocDownload = document.getElementById("firstDocDownload");
+var solutionGalleryDownload = document.getElementById("solutionGalleryDownload");
 
 if(isMobile.any() == "iOS"){
     firstDocDownload.href = "itms-services://?action=download-manifest&url=https://cscfirstdoc.mybluemix.net/build/FirstDocMobile.plist";
+    solutionGalleryDownload.href = "itms-services://?action=download-manifest&url=https://cscfirstdoc.mybluemix.net/build/FirstDocSolution.plist";
 }
 else if(isMobile.any() == "Android") {
     firstDocDownload.href = "";
+    solutionGalleryDownload.href = "https://cscfirstdoc.mybluemix.net/build/FirstDocSolution.apk";
 }
 else{
     firstDocDownload.href = "";
+    solutionGalleryDownload.href = "";
 }
 
 
